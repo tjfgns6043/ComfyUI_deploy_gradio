@@ -11,13 +11,13 @@ The following diagram illustrates the overall system architecture:
 ### 1️⃣ **Running with Docker**
 ```bash
 git clone https://github.com/tjfgns6043/ComfyUI_deploy_gradio.git
-cd ComfyUI
+cd ComfyUI_deploy_gradio
 docker build -t comfy_ollama .
 ```
 
 ### 2️⃣ **Running Locally (Without Ollama, Gradio Only)**
 ```bash
-cd ComfyUI
+cd ComfyUI_deploy_gradio/ComfyUI
 conda create -n comfy_env
 conda activate comfy_env
 pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/cu128
