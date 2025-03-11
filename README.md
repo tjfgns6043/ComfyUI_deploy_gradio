@@ -9,6 +9,10 @@ The following diagram illustrates the overall system architecture:
 
 ## 🔧 **Installation & Execution**
 ### 1️⃣ **Running with Docker**
+
+Before build dockerfile, you should change dockerfile line 39 `RUN ngrok config add-authtoken Your_autoToken` your authtoken
+- [ngrok authtoken](https://dashboard.ngrok.com/get-started/your-authtoken)
+
 ```bash
 git clone https://github.com/tjfgns6043/ComfyUI_deploy_gradio.git
 cd ComfyUI_deploy_gradio
