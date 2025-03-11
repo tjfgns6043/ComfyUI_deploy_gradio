@@ -27,18 +27,31 @@ python demo.py
 ```
 
 ## 📂 **System Configuration**
-### **1. Docker**
+### **1. Download Required Model Weights**
+Before running the system, ensure that the necessary model weights are placed in the correct directories:
+
+- **UNet Weights** (`ComfyUI/models/unet`)
+  - [flux1-dev-fp8.safetensors](https://huggingface.co/lllyasviel/flux1_dev/blob/main/flux1-dev-fp8.safetensors)
+
+- **VAE Weights** (`ComfyUI/models/vae`)
+  - [ae.safetensors](https://huggingface.co/black-forest-labs/FLUX.1-dev/blob/main/ae.safetensors)
+
+- **Text Encoder Weights** (`ComfyUI/models/text_encoders`)
+  - [clip_l.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/clip_l.safetensors)
+  - [t5xxl_fp16.safetensors](https://huggingface.co/comfyanonymous/flux_text_encoders/blob/main/t5xxl_fp16.safetensors)
+
+### **2. Docker**
 - `Dockerfile`: Defines the entire Flux Dev environment.
 - Build the image with `docker build -t comfy_ollama .`, then run it using:
   ```bash
   docker run -d --name comfy_ollama --gpus all -p 11434:11434 -p 7860:7860 comfy_ollama
   ```
 
-### **2. Ngrok**
+### **3. Ngrok**
 - Ngrok is used to expose the Gradio UI for remote access.
 - Run Ngrok with: `ngrok http 7860`
 
-### **3. Ollama (Korean Prompt Translation)**
+### **4. Ollama (Korean Prompt Translation)**
 - Uses the `EEVE-Korean-Instruct-10.8B` model to translate Korean prompts into English.
 
 ## 🖥 **Gradio UI Usage**
