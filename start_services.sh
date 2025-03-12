@@ -4,6 +4,13 @@
 export OLLAMA_NO_CUDA=1
 ollama serve &
 
+# ✅SSH 키가 없으면 생성 (ollama에서 필요)
+if [ ! -f /root/.ollama/id_ed25519 ]; then
+    echo "🔑 Generating Ollama SSH Key..."
+    ssh-keygen -t ed25519 -f /root/.ollama/id_ed25519 -N ""
+    echo "✅ SSH Key generated!"
+fi
+
 # ✅ Ollama가 실행될 때까지 대기 후 모델 다운로드
 sleep 5
 ollama pull hf.co/teddylee777/EEVE-Korean-Instruct-10.8B-v1.0-gguf:Q8_0
