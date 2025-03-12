@@ -137,6 +137,7 @@ def generate_image(prompt, width, height, seed, guidance, steps):
     translated_prompt = prompt
     if is_korean:
         translated_prompt = translate_korean_to_english(prompt)
+        print(translated_prompt)
 
     # (3) 예상 처리 시간
     estimated_time = estimate_processing_time(width, height, steps)
