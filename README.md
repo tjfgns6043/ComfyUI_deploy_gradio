@@ -81,8 +81,16 @@ Before running the system, ensure that the necessary model weights are placed in
 - Improve image quality (Hypernetwork tuning)
 - Add user-specific prompt saving & retrieval
 - Optimize GPU performance for faster response times
-
 ---
+
+## Demo
+https://github.com/user-attachments/assets/506db974-3bff-4d90-979a-1622119a326a
+
+
+
+
+
+
 📌 **Contributions & Support**
 - Pull requests are welcome! 😊
 - Report issues via [GitHub Issues](https://github.com/your-repo/flux-dev-ai/issues).
